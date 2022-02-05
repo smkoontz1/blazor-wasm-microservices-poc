@@ -1,5 +1,6 @@
-﻿using CommonAPI;
+﻿using CommonAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using OmahaAPI.Sdk.V1.Responses;
 
 namespace OmahaAPI.Controllers
 {
@@ -8,14 +9,14 @@ namespace OmahaAPI.Controllers
     public class OmahaController
     {
         [HttpGet("/omaha")]
-        public string Get()
+        public OmahaForecastResponse Get()
         {
-            return "todo";
-            //return new WeatherForecast
-            //{
-            //    Location = "Omaha",
-            //    WeatherType = WeatherType.Freezing
-            //};
+            return new OmahaForecastResponse
+            {
+                Location = "Omaha",
+                WeatherType = WeatherTypeAPI.Freezing,
+                TemperatureF = 32
+            };
         }
     }
 }

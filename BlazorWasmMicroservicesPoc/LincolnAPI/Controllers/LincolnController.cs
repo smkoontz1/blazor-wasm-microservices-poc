@@ -1,4 +1,4 @@
-﻿using CommonAPI;
+﻿using CommonAPI.Models;
 using LincolnAPI.Sdk.V1.Responses;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +14,7 @@ namespace LincolnAPI.Controllers
             return new LincolnForecastResponse
             {
                 Location = "Lincoln",
-                WeatherType = WeatherType.Cool
+                WeatherType = WeatherTypeAPI.Cool
             };
         }
     }

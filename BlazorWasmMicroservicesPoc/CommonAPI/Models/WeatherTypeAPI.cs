@@ -1,6 +1,6 @@
-﻿namespace CommonAPI
+﻿namespace CommonAPI.Models
 {
-    public enum WeatherType
+    public enum WeatherTypeAPI
     {
         Freezing,
         Bracing,

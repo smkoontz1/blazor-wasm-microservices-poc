@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommonAPI\CommonAPI.csproj" />
+    <ProjectReference Include="..\OmahaAPI.Sdk\OmahaAPI.Sdk.csproj" />
   </ItemGroup>
 
 </Project>

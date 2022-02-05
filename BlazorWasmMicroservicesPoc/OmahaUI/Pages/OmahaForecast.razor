@@ -1,0 +1,14 @@
+﻿@page "/omaha/forecast"
+@inject OmahaApiClient OmahaApi
+
+<WeatherDisplay Location="@this._forecastResponse.Location" WeatherType="@this._forecastResponse.WeatherType.ToString()" />
+<OmahaTemperatureGauge TempF="@this._forecastResponse.TemperatureF" />
+
+@code {
+    private OmahaForecastResponse _forecastResponse = new OmahaForecastResponse();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _forecastResponse = await OmahaApi.GetWeatherAsync();
+    }
+}

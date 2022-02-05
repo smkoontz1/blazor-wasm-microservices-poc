@@ -1,0 +1,18 @@
+﻿@page "/lincoln/forecast"
+@inject LincolnApiClient LincolnApi
+
+<h1>Location: @_forecastResponse.Location</h1>
+<h2>Weather: @_forecastResponse.WeatherType</h2>
+
+@code {
+    private LincolnForecastResponse _forecastResponse = new LincolnForecastResponse();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Rendering page");
+
+        _forecastResponse = await LincolnApi.GetWeatherAsync();
+
+        Console.WriteLine(_forecastResponse);
+    }
+}

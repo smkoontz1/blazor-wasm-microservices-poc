@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WeatherForecasts\Shared\WeatherForecasts.Shared.csproj" />
+    <ProjectReference Include="..\..\WeatherForecasts\Shared\WeatherForecasts.Shared.csproj" />
   </ItemGroup>
 
 </Project>

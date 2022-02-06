@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lincoln\Shared\Lincoln.Shared.csproj" />
+    <ProjectReference Include="..\Shared\Lincoln.Shared.csproj" />
   </ItemGroup>
 
 </Project>

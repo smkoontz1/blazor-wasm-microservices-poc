@@ -13,16 +13,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Omaha.Shared\Omaha.Shared.csproj" />
-    <ProjectReference Include="..\Client\WeatherForecasts.Client.csproj" />
-    <ProjectReference Include="..\Shared\WeatherForecasts.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
     <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Omaha.Shared\Omaha.Shared.csproj" />
+    <ProjectReference Include="..\WeatherForecasts\Client\WeatherForecasts.Client.csproj" />
+    <ProjectReference Include="..\WeatherForecasts\Shared\WeatherForecasts.Shared.csproj" />
   </ItemGroup>
 
 </Project>

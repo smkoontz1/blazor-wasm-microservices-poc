@@ -1,0 +1,27 @@
+﻿@page "/omaha/forecast"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using WeatherForecasts.Shared
+@attribute [Authorize]
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Location: @this._forecastResponse?.Location</h1>
+<h2>Weather Type: @this._forecastResponse?.WeatherType</h2>
+
+@code {
+    private OmahaForecastResponse? _forecastResponse = new OmahaForecastResponse();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            this._forecastResponse = await Http.GetFromJsonAsync<OmahaForecastResponse>("/omaha");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+}

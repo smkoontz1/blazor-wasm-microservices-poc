@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omaha.Server", "Omaha.Serve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omaha.Pages", "Omaha.Pages\Omaha.Pages.csproj", "{173652AD-CE3B-4671-B3A9-7FF88E12E1EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lincoln.Server", "Lincoln\Server\Lincoln.Server.csproj", "{39BE6789-2904-45C1-A74C-101EF711C9D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lincoln.Shared", "Lincoln\Shared\Lincoln.Shared.csproj", "{A4A0CAEE-FB9D-4718-9F31-AA253E2897B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{173652AD-CE3B-4671-B3A9-7FF88E12E1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{173652AD-CE3B-4671-B3A9-7FF88E12E1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{173652AD-CE3B-4671-B3A9-7FF88E12E1EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39BE6789-2904-45C1-A74C-101EF711C9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BE6789-2904-45C1-A74C-101EF711C9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BE6789-2904-45C1-A74C-101EF711C9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BE6789-2904-45C1-A74C-101EF711C9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A0CAEE-FB9D-4718-9F31-AA253E2897B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A0CAEE-FB9D-4718-9F31-AA253E2897B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A0CAEE-FB9D-4718-9F31-AA253E2897B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A0CAEE-FB9D-4718-9F31-AA253E2897B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

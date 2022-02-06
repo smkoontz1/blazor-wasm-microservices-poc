@@ -1,22 +1,22 @@
-﻿@page "/omaha/forecast"
+﻿@page "/lincoln/forecast"
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @attribute [Authorize]
-@inject OmahaHttpClient OmahaHttpClient
+@inject LincolnHttpClient LincolnHttpClient
 
-<PageTitle>Omaha forecast</PageTitle>
+<PageTitle>Lincoln forecast</PageTitle>
 
 <h1>Location: @this._forecastResponse?.Location</h1>
 <h2>Weather Type: @this._forecastResponse?.WeatherType</h2>
 
 @code {
-    private OmahaForecastResponse? _forecastResponse = new OmahaForecastResponse();
+    private LincolnForecastResponse? _forecastResponse = new LincolnForecastResponse();
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            this._forecastResponse = await OmahaHttpClient.Client.GetFromJsonAsync<OmahaForecastResponse>("/omaha");
+            this._forecastResponse = await LincolnHttpClient.Client.GetFromJsonAsync<LincolnForecastResponse>("/lincoln");
         }
         catch (AccessTokenNotAvailableException exception)
         {

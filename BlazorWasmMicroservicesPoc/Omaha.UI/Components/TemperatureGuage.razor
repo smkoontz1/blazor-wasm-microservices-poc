@@ -1,0 +1,22 @@
+﻿<h2 style="color: @this._color">@this.TempF</h2>
+
+@code {
+    [Parameter]
+    public int TempF { get; set; }
+
+    private string? _color;
+
+    protected override void OnParametersSet()
+    {
+        if (this.TempF > 50)
+        {
+            this._color = "red";
+        }
+        else
+        {
+            this._color = "blue";
+        }
+
+        base.OnParametersSet();
+    }
+}

@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Omaha.Shared\Omaha.Shared.csproj" />
+    <ProjectReference Include="..\WeatherForecasts.Components\WeatherForecasts.Components.csproj" />
   </ItemGroup>
 
 </Project>

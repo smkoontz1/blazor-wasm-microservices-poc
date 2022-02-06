@@ -1,6 +1,5 @@
 using Lincoln.Shared;
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Omaha.Shared;
 using WeatherForecasts.Client;
@@ -10,18 +9,21 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
+// Base URLs come from config later
 var _omahaBaseUrl = "https://localhost:7252";
 var _lincolnBaseUrl = "https://localhost:7269";
 
+// Add custom client handlers to grab the right oauth tokens
 builder.Services.AddScoped<OmahaAuthorizationMessageHandler>();
 builder.Services.AddScoped<LincolnAuthorizationMessageHandler>();
 
+// Register client builders
 builder.Services.AddHttpClient("Omaha.ServerAPI", client => client.BaseAddress = new Uri(_omahaBaseUrl))
     .AddHttpMessageHandler<OmahaAuthorizationMessageHandler>();
 builder.Services.AddHttpClient("Lincoln.ServerAPI", client => client.BaseAddress = new Uri(_lincolnBaseUrl))
     .AddHttpMessageHandler<LincolnAuthorizationMessageHandler>();
 
-// Supply HttpClient instances that include access tokens when making requests to the server project
+// Register clients
 builder.Services.AddScoped<OmahaHttpClient>((sp => new OmahaHttpClient(sp.GetRequiredService<IHttpClientFactory>().CreateClient("Omaha.ServerAPI"))));
 builder.Services.AddScoped<LincolnHttpClient>(sp => new LincolnHttpClient(sp.GetRequiredService<IHttpClientFactory>().CreateClient("Lincoln.ServerAPI")));
 

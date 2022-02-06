@@ -1,0 +1,10 @@
+﻿<h1>Location: @this.Location</h1>
+<h2>Weather Type: @this.WeatherType</h2>
+
+@code {
+    [Parameter]
+    public string? Location { get; set; }
+
+    [Parameter]
+    public string? WeatherType { get; set; }
+}

@@ -1,6 +1,6 @@
 ﻿using WeatherForecasts.Shared;
 
-namespace Lincoln.Shared.V1
+namespace Lincoln.Shared.V1.Responses
 {
     public class LincolnForecastResponse
     {

@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Lincoln.Pages\Lincoln.Pages.csproj" />
     <ProjectReference Include="..\..\Omaha.Pages\Omaha.Pages.csproj" />
   </ItemGroup>
 

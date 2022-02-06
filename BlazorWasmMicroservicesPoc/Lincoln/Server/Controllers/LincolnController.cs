@@ -1,4 +1,4 @@
-using Lincoln.Shared.V1;
+using Lincoln.Shared.V1.Responses;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web.Resource;

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\WeatherForecasts\Components\WeatherForecasts.Components.csproj" />
     <ProjectReference Include="..\Shared\Lincoln.Shared.csproj" />
   </ItemGroup>
 

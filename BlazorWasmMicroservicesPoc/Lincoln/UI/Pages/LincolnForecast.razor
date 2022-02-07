@@ -4,10 +4,11 @@
 @attribute [Authorize]
 @inject LincolnHttpClient LincolnHttpClient
 
-<PageTitle>Lincoln forecast</PageTitle>
+<PageTitle>Lincoln Forecast</PageTitle>
 
-<h1>Location: @this._forecastResponse?.Location</h1>
-<h2>Weather Type: @this._forecastResponse?.WeatherType</h2>
+<WeatherDisplay
+    Location="@this._forecastResponse?.Location"
+    WeatherType="@this._forecastResponse?.WeatherType.ToString()" />
 
 @code {
     private LincolnForecastResponse? _forecastResponse = new LincolnForecastResponse();
